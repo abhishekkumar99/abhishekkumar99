@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,fact,original;
+	
+	printf("Enter the positive number:");
+	scanf("%d",&n);
+	int last,s=0;
+	original = n;
+	while(n!=0)
+	{
+		last = n%10;
+
+		s = s*10 + last;
+		n = n/10;
+	}
+	if(s == original)
+	{
+		printf("%d is a Pallindrome number.",original);
+	}
+	else
+		printf("%d is not a Pallindrome number.",original);
+}
